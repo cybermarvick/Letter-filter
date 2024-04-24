@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" value="" oninput="myFunc(event)" type="text">
+    <p id="display"></p>
+
+</body>
+</html>
+<script>
+
+    let input = document.getElementById('input')
+    let display = document.getElementById('display')
+    
+
+    names = ['dave', 'bayo', 'titi', 'daniel','tunde','wisdom','timi']
+        function myFunc(){
+            let nameArr = names.filter(function(dan){
+                return dan.includes(input.value.toLowerCase())
+            })
+            console.log(nameArr);
+            display.innerHTML = nameArr
+        }
+</script>
